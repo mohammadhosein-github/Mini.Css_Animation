@@ -1,4 +1,99 @@
-h3 {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.my-padding {
+  padding: 3rem 0;
+}
+
+section {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+}
+
+nav.navbar-light {
+  background-color: #fff !important;
+}
+
+.header {
+  overflow: hidden;
+}
+
+.header .left-side {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.header .left-side h1 {
+  text-transform: capitalize;
+}
+
+.header .right-side img {
+  width: 125%;
+}
+
+.popular-courses .text-area h3 {
   color: red;
+}
+
+.popular-courses .card {
+  border: none;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.13);
+  border-radius: 1.5rem;
+}
+
+.popular-courses .card img {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.wwp {
+  background-color: #ecf7fc;
+}
+
+.wwp img {
+  border-radius: 3px;
+}
+
+.achievements .text-area {
+  margin: 0 auto;
+}
+
+.wocs {
+  background-color: #ecf7fc;
+}
+
+.wocs .container-fluid {
+  padding: 0;
+}
+
+.wocs .text-area {
+  background: #fff;
+}
+
+.blog .text-area {
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #393744;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
