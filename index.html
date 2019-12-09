@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/413864afe3.js"></script>
+    <script src="./ScrollReveal/scrollreveal.js"></script>
     <link type="text/css" rel="stylesheet" href="./style.css">
     <title>Css-Animation</title>
 </head>
@@ -14,9 +15,9 @@
 <body>
 
     <!-- ****** Navbar ****** -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Webird</a>
+    <div class="container nav-container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#"><span>we</span>bird</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,13 +29,13 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#courses">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#blog">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +46,7 @@
     <section class="header">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mobile-header">
                     <div class="left-side d-flex align-items-center">
                         <h1>be the person you always wanted</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nemo perspiciatis omnis
@@ -58,7 +59,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-side">
-                        <img src="./media/student-3.jpg" alt="business">
+                        <img src="./media/business.jpg" alt="business">
                     </div>
                 </div>
             </div>
@@ -66,23 +67,23 @@
     </section>
 
     <!-- ****** Popular Courses ****** -->
-    <section class="popular-courses my-padding">
+    <section class="popular-courses" id="courses">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-area">
                     <h3>our popular courses</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium iste corporis, maxime
                         architecto obcaecati.</p>
-                    <a href="#">see more</a>
+                    <a href="#" class="see-more">SEE MORE</a>
                 </div>
                 <div class="col-md-4">
                     <div class="card" style="width: 100%;">
                         <img src="./media/web1.jpg" class="card-img-top" alt="web">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">How to Build a Real-Time Virtual Reality Game</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
+                                deleniti blanditiis odit enim.</p>
+                            <a href="#" class="see-more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -90,10 +91,10 @@
                     <div class="card" style="width: 100%;">
                         <img src="./media/web2.jpg" class="card-img-top" alt="web">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Get Started with UI Design with Three Tips to Speed up</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
+                                deleniti blanditiis odit enim.</p>
+                            <a href="#" class="see-more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -101,13 +102,13 @@
     </section>
 
     <!-- ****** What We Provide ****** -->
-    <section class="wwp my-padding">
+    <section class="wwp" id="services">
         <div class="container">
-            <div class="title text-center">
+            <div class="title text-center mb-5">
                 <h3>what do we provide</h3>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 mt-5 align-items-center">
+            <div class="row justify-content-center r-1">
+                <div class="col-md-6 align-items-center text-area">
                     <h4>we let their dream come true</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dignissimos recusandae mollitia
                         ea. Perspiciatis iste porro quo magni nam, nemo nulla quam laudantium repellat inventore.</p>
@@ -116,15 +117,19 @@
                     <img src="./media/image7.jpg" alt="summer" class="w-100">
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center r-2">
                 <div class="col-md-4">
                     <img src="./media/photo1.jpg" alt="summer" class="w-100">
                 </div>
-                <div class="col-md-6 mt-5 align-items-center">
+                <div class="col-md-6 align-items-center text-area">
                     <h4>we let their dream come true</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dignissimos recusandae mollitia
                         ea. Perspiciatis iste porro quo magni nam, nemo nulla quam laudantium repellat inventore.</p>
                 </div>
+            </div>
+
+            <div class="col-12 text-center">
+                <a href="#" class="see-more">Findout More -></a>
             </div>
         </div>
     </section>
@@ -191,7 +196,7 @@
     </section>
 
     <!-- ****** Check Out Our Latest Blog ****** -->
-    <section class="blog my-padding">
+    <section class="blog my-padding" id="blog">
         <div class="container">
             <div class="col-md-8 text-center text-area">
                 <h3>check out our latest blog</h3>
@@ -273,6 +278,7 @@
 
     <script src="./jquery/jquery-3.4.1.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
