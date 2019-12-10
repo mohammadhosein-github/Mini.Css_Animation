@@ -4,6 +4,8 @@ $heading-color: #2e3d5b;
 $section-bg: #ecf3fc;
 $btn-color: #635dff;
 $logo-color: #6296f9;
+$numbers-color: #2dcbbd;
+$footer-bg: #3C4E60;
 
 @mixin sm-size {
   @media (max-width: 767px) {
@@ -67,6 +69,7 @@ p {
   letter-spacing: 1px;
   word-spacing: 2px;
   color: $btn-color;
+  text-transform: capitalize;
 
   &:hover {
     color: darken($btn-color, 30);
@@ -375,6 +378,7 @@ p {
 
     .text-area {
       margin-top: 3rem;
+
       @include sm-size() {
         margin-top: 1rem;
       }
@@ -397,30 +401,325 @@ p {
 .achievements {
   .text-area {
     margin: 0 auto;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.3rem;
+    }
+
+    p {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .number-cards {
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 30px;
+      background: linear-gradient(90deg,
+          rgba(255, 175, 0, 1) 0%,
+          rgba(255, 255, 255, 1) 80%);
+      border-radius: 3px;
+
+      @include sm-size() {
+        display: none;
+      }
+    }
+
+    &.first-card {
+      &::after {
+        display: none;
+      }
+    }
+
+    p {
+      text-transform: capitalize;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 2rem;
+
+      span {
+        color: $numbers-color;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      @include sm-size() {
+        margin-bottom: 2rem;
+      }
+    }
   }
 }
 
 .wocs {
   overflow: hidden;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(236, 243, 252, 1) 100%);
 
   .container-fluid {
     padding: 0;
   }
 
-  .text-area {
+  .title {
     background: #fff;
+    padding: 3rem 0;
+
+    h3 {
+      font-size: 2.3rem;
+      word-spacing: 3px;
+      letter-spacing: 1px;
+    }
   }
 
-  background-color: $section-bg;
+  .row {
+    .text-area {
+      margin-top: 2.5rem;
+
+      @include md-size() {
+        margin-top: 0;
+      }
+
+      @include sm-size() {
+        order: 2;
+        margin: 0 3rem;
+      }
+
+      h5 {
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+
+        @include md-size() {
+          margin-bottom: 0.3rem;
+        }
+
+        &.writer {
+          margin-bottom: 0.3rem;
+
+          @include md-size() {
+            margin-bottom: 0.1rem;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 1.6rem;
+        color: rgba(0, 0, 0, 0.6);
+
+        @include md-size() {
+          margin-bottom: 1rem;
+        }
+      }
+
+      span {
+        display: block;
+        margin-bottom: 3rem;
+        color: rgba(0, 0, 0, 0.5);
+
+        @include md-size() {
+          margin-bottom: 1rem;
+        }
+      }
+
+      a {
+        color: $numbers-color;
+      }
+    }
+
+    .image {
+      @include sm-size() {
+        order: 1;
+      }
+
+      .image-container {
+        @include sm-size() {
+          margin: 1rem 3rem 2rem;
+        }
+
+        position: relative;
+
+        .mark {
+          position: absolute;
+          top: -25px;
+          left: -25px;
+          height: 55px;
+          width: 55px;
+          background-color: $numbers-color;
+          border-radius: 50%;
+
+          span {
+            line-height: 0;
+            font-size: 4rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
 .blog {
   .text-area {
-    margin: 0 auto;
+    margin: 0 auto 5rem;
+
+    h3 {
+      font-size: 2.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+
+  .row {
+    span {
+      display: inline-block;
+      color: $logo-color;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .see-more {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .text {
+      margin-top: 3rem;
+      padding-left: 4rem;
+
+      @include sm-size() {
+        margin-top: 0.6rem;
+        margin-bottom: 3rem;
+        padding-left: 0;
+      }
+
+      p {
+        width: 50%;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .my-card {
+      background-color: #f1f1f1;
+      margin-bottom: 2rem;
+      padding: 1.5rem 2rem;
+
+      p {
+        margin-bottom: 2rem;
+        width: 70%;
+
+        @include md-size() {
+          width: 100%;
+        }
+
+        @include sm-size() {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+.email {
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .my-form {
+    display: inline-block;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+
+    input[type="email"] {
+      background-color: transparent;
+      border: none;
+      padding: 0.6rem 1rem;
+      width: 270px;
+    }
+
+    input[type="submit"] {
+      padding: 0.6rem 0.8rem;
+      border-radius: 30px;
+      border: none;
+      background-color: $btn-color;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    input:focus {
+      outline: none;
+    }
   }
 }
 
 footer {
-  background-color: rgb(57, 55, 68);
+  background-color: $footer-bg;
   color: #fff;
+
+  .text-area {
+    @include sm-size() {
+      margin-bottom: 3rem;
+    }
+
+    span {
+      display: inline-block;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      opacity: 0.9;
+      margin-bottom: 0.7rem;
+    }
+
+    p,
+    .socials i {
+      color: rgba(255, 255, 255, 0.4);
+
+      &.first-p {
+        margin-bottom: 2.7rem;
+      }
+    }
+
+    .socials {
+      i {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .features,
+  .services {
+    span {
+      display: block;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      text-transform: capitalize;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
