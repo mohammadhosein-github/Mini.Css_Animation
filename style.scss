@@ -5,7 +5,7 @@ $section-bg: #ecf3fc;
 $btn-color: #635dff;
 $logo-color: #6296f9;
 $numbers-color: #2dcbbd;
-$footer-bg: #3C4E60;
+$footer-bg: #3c4e60;
 
 @mixin sm-size {
   @media (max-width: 767px) {
@@ -52,6 +52,10 @@ h5 {
   color: $heading-color;
   font-weight: 700;
   word-spacing: 1px;
+  &::selection {
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
 
 h3 {
@@ -62,6 +66,17 @@ p {
   color: $heading-color;
   line-height: 1.4rem;
   font-weight: 600;
+}
+p,
+span {
+  &::selection {
+    background-color: $logo-color;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+a:focus {
+  outline: none;
 }
 
 .see-more {
@@ -115,22 +130,6 @@ p {
         .nav-item {
           position: relative;
           margin: 0 10px;
-
-          &.active {
-            &::before {
-              content: " ";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 3px;
-              background-color: $btn-color;
-
-              @include sm-size() {
-                display: none;
-              }
-            }
-          }
 
           .nav-link {
             padding: 20px 0;
@@ -424,9 +423,11 @@ p {
       transform: translateY(-50%);
       height: 4px;
       width: 30px;
-      background: linear-gradient(90deg,
-          rgba(255, 175, 0, 1) 0%,
-          rgba(255, 255, 255, 1) 80%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 175, 0, 1) 0%,
+        rgba(255, 255, 255, 1) 80%
+      );
       border-radius: 3px;
 
       @include sm-size() {
@@ -462,9 +463,11 @@ p {
 
 .wocs {
   overflow: hidden;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(236, 243, 252, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(236, 243, 252, 1) 100%
+  );
 
   .container-fluid {
     padding: 0;
